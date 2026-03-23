@@ -11,6 +11,58 @@ trigger: ["pKa", "酸度常数", "电离常数", "acidic pKa", "basic pKa", "mac
 - **custom**：基于规则、官能团和可选自定义模型的本地预测
 - **unipka**：基于 **Uni-pKa Bohrium notebook 单文件权重路线** 的微观态枚举 + 自由能汇总预测
 
+## ⚡ 快速开始（首次使用必读）
+
+### 1. 安装依赖
+
+```bash
+cd skills/pka-predictor
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+### 2. 下载 Uni-pKa 模型权重（仅 unipka 后端需要）
+
+**使用 Hugging Face CLI（推荐）：**
+
+```bash
+# 安装 huggingface_hub（如果尚未安装）
+pip install huggingface_hub
+
+# 下载模型权重文件
+mkdir -p skills/pka-predictor/Uni-pKa/uni-pka-ckpt_v2
+hf download Lai-ao/uni-pka-ckpt_v2 t_dwar_v_novartis_a_b.pt \
+  --repo-type model \
+  --local-dir skills/pka-predictor/Uni-pKa/uni-pka-ckpt_v2
+
+# 下载模板文件（如果本地没有）
+hf download Lai-ao/uni-pka-ckpt_v2 smarts_pattern.tsv \
+  --repo-type model \
+  --local-dir skills/pka-predictor/Uni-pKa/uni-pka-ckpt_v2
+
+hf download Lai-ao/uni-pka-ckpt_v2 simple_smarts_pattern.tsv \
+  --repo-type model \
+  --local-dir skills/pka-predictor/Uni-pKa/uni-pka-ckpt_v2
+```
+
+**或手动下载：**
+
+访问 https://huggingface.co/Lai-ao/uni-pka-ckpt_v2 下载以下文件到 `Uni-pKa/uni-pka-ckpt_v2/` 目录：
+- `t_dwar_v_novartis_a_b.pt`（~571MB，模型权重）
+- `smarts_pattern.tsv`（SMARTS 模板）
+- `simple_smarts_pattern.tsv`（简化 SMARTS 模板）
+
+### 3. 验证安装
+
+```bash
+# 测试 custom 后端
+./run_with_venv.sh --smiles "CC(=O)O" --name "乙酸" --backend custom
+
+# 测试 unipka 后端
+./run_with_venv.sh --smiles "CC(=O)O" --name "乙酸" --backend unipka --cpu
+```
+
 ## 触发条件
 
 当用户有以下需求时适合调用：
@@ -61,6 +113,13 @@ trigger: ["pKa", "酸度常数", "电离常数", "acidic pKa", "basic pKa", "mac
 - 这个分子的去质子化 pKa 是多少
 
 ### 命令行使用
+
+**一键安装（首次使用）：**
+
+```bash
+# 运行安装脚本（自动下载模型和模板文件）
+./setup_models.sh
+```
 
 **使用虚拟环境（推荐，支持 UniPKA 后端）：**
 

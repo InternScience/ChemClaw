@@ -9,6 +9,51 @@
 
 ---
 
+## ⚡ 快速开始
+
+### 1. 安装依赖
+
+```bash
+cd skills/pka-predictor
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+### 2. 下载模型权重（仅 unipka 后端需要）
+
+```bash
+# 安装 Hugging Face CLI
+pip install huggingface_hub
+
+# 下载模型文件（~571MB）
+mkdir -p skills/pka-predictor/Uni-pKa/uni-pka-ckpt_v2
+hf download Lai-ao/uni-pka-ckpt_v2 t_dwar_v_novartis_a_b.pt \
+  --repo-type model \
+  --local-dir skills/pka-predictor/Uni-pKa/uni-pka-ckpt_v2
+
+# 下载模板文件
+hf download Lai-ao/uni-pka-ckpt_v2 smarts_pattern.tsv \
+  --repo-type model \
+  --local-dir skills/pka-predictor/Uni-pKa/uni-pka-ckpt_v2
+
+hf download Lai-ao/uni-pka-ckpt_v2 simple_smarts_pattern.tsv \
+  --repo-type model \
+  --local-dir skills/pka-predictor/Uni-pKa/uni-pka-ckpt_v2
+```
+
+### 3. 测试运行
+
+```bash
+# custom 后端
+./run_with_venv.sh --smiles "CC(=O)O" --name "乙酸" --backend custom
+
+# unipka 后端
+./run_with_venv.sh --smiles "CC(=O)O" --name "乙酸" --backend unipka --cpu
+```
+
+---
+
 ## Features
 
 - 支持单个 SMILES 的 pKa 预测
@@ -35,3 +80,8 @@ pka-predictor/
 │   └── utils/
 ├── Uni-Core/
 └── Uni-pKa/
+    └── uni-pka-ckpt_v2/
+        ├── t_dwar_v_novartis_a_b.pt    # 模型权重（需从 Hugging Face 下载）
+        ├── smarts_pattern.tsv          # SMARTS 模板
+        └── simple_smarts_pattern.tsv   # 简化 SMARTS 模板
+```
