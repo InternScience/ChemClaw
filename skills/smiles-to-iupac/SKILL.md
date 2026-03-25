@@ -1,5 +1,5 @@
 ---
-name: smiles_to_iupac
+name: smiles-to-iupac
 description: 将 SMILES 字符串转换为 IUPAC 化学名称。使用 PubChem、NCI/CADD、STOUT、RDKit-InChI 多种方法智能转换。
 trigger: ["SMILES", "IUPAC", "SMILES 转名称", "smiles to iupac", "化学名称", "分子命名", "STOUT"]
 ---

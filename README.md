@@ -11,7 +11,7 @@ npx skills add AI4Chem/ChemClaw
 Install only one skill:
 
 ```bash
-npx skills add AI4Chem/ChemClaw --skill nmr-structure-elucidator
+npx skills add AI4Chem/ChemClaw --skill mol_3d_viewer
 ```
 
 List skills from this package:
@@ -19,21 +19,6 @@ List skills from this package:
 ```bash
 npx skills add AI4Chem/ChemClaw --list
 ```
-
-## Repository Layout
-
-- `skills/.curated/`: stable skills for general usage
-- `skills/.experimental/`: work-in-progress skills
-
-Each skill directory contains a `SKILL.md` file with:
-
-- `name`: skill identifier
-- `description`: what the skill does and when to trigger it
-
-## Example Skills
-
-- `nmr-structure-elucidator`: infer candidate structures from 1H/13C NMR lists or images, then return ranked SMILES and assignments
-- `stoichiometry-solver`: solve mole/mass/concentration and limiting-reagent tasks
 
 ## Contributing
 

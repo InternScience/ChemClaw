@@ -1,5 +1,5 @@
 ---
-name: mol_image_to_smiles
+name: mol-image-to-smiles
 description: 将分子结构图片转换为 SMILES 字符串。使用 DECIMER 和 MolNextR 模型进行图像识别。
 trigger: ["分子图片", "SMILES", "图片转 SMILES", "image to smiles", "分子结构图", "chemical image", "OCR", "识别分子"]
 ---

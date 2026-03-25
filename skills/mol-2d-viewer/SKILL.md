@@ -1,5 +1,5 @@
 ---
-name: mol_2d_viewer
+name: mol-2d-viewer
 description: 将 SMILES 或化学名称转换为分子 2D 结构图。支持普通分子和聚合物 2D 结构绘制。
 trigger: ["2D 分子", "分子 2D", "2D 结构", "2D visualization", "molecule 2D", "分子结构图", "SMILES 转图片", "draw molecule", "聚合物结构"]
 ---

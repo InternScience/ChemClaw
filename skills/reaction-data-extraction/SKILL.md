@@ -1,5 +1,5 @@
 ---
-name: reaction_data_extraction
+name: reaction-data-extraction
 description: 从 PDF 文献中提取化学反应数据，特别是反应条件优化信息。支持提取反应物、产物、催化剂、溶剂、温度、时间、产率等，并输出结构化 CSV 文件。使用 MinerU + NLP + 规则匹配进行精确提取。
 trigger: ["反应数据提取", "提取反应条件", "reaction extraction", "extract reaction conditions", "从文献提取反应", "反应优化数据", "reaction optimization", "提取产率", "extract yield", "反应表格", "reaction table"]
 ---

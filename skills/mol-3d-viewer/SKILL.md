@@ -1,5 +1,5 @@
 ---
-name: mol_3d_viewer
+name: mol-3d-viewer
 description: 将 SMILES 或化学名称转换为分子 3D 结构。支持生成 SDF 文件、3D 分子图片和可交互 HTML 网页（可旋转观察）。
 trigger: ["3D 分子", "分子 3D", "3D 结构", "3D visualization", "rotate molecule", "交互分子", "3D model", "分子模型"]
 ---
@@ -217,12 +217,12 @@ pip install openbabel  # 支持更多文件格式
 ## OPSIN API 说明
 
 - **来源**: 剑桥大学（重定向至欧洲生物信息学研究所 EBI）
-- **网址**: https://opsin.ch.cam.ac.uk/
-- **优势**: 
+- **网址**: <https://opsin.ch.cam.ac.uk/>
+- **优势**:
   - 支持复杂 IUPAC 名称解析
   - 无需 API 密钥
   - 自动跟随重定向
-- **限制**: 
+- **限制**:
   - 需要网络连接
   - 某些商品名可能无法识别
 

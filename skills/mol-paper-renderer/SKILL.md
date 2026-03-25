@@ -1,5 +1,5 @@
 ---
-name: mol_paper_renderer
+name: mol-paper-renderer
 description: 论文级分子渲染工具。使用 xyzrender 生成出版质量的 SVG、PNG、PDF 和 GIF 动画。支持过渡态、非共价相互作用、分子轨道、晶体结构等高级功能。
 trigger: ["论文级", "publication-quality", "出版质量", "xyzrender", "论文图片", "论文绘图", "规范分子图", "过渡态", "TS bond", "NCI", "分子轨道", "cube file", "晶体结构", "unit cell", "convex hull", "GIF 动画", "rotation GIF"]
 ---

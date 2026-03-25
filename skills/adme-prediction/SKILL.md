@@ -1,5 +1,5 @@
 ---
-name: adme_prediction
+name: adme-prediction
 description: ADME 性质预测工具。预测分子的吸收、分布、代谢、排泄性质，包括 Caco-2 通透性、PAMPA、HIA、Pgp 抑制、生物利用度、亲脂性等。使用 Morgan 指纹 + Random Forest/XGBoost。当用户提到 ADME 预测、药物性质、通透性、吸收、代谢等时触发。
 ---
 
@@ -252,6 +252,7 @@ python3 scripts/adme_train.py --all --data-dir ./tdc_data/ --output-dir ./models
 **单位**: log Papp (10^-6 cm/s)
 
 **解释**:
+>
 - > -5.0: 高通透性（吸收良好）
 - -6.0 to -5.0: 中等通透性
 - < -6.0: 低通透性（吸收差）
@@ -261,6 +262,7 @@ python3 scripts/adme_train.py --all --data-dir ./tdc_data/ --output-dir ./models
 **说明**: 平行人工膜通透性测定，高通量筛选药物渗透性。
 
 **类别**:
+
 - `High`: 高通透性
 - `Low-Moderate`: 低 - 中等通透性
 
@@ -269,6 +271,7 @@ python3 scripts/adme_train.py --all --data-dir ./tdc_data/ --output-dir ./models
 **说明**: 预测药物从胃肠道吸收到血液的能力。
 
 **类别**:
+
 - `Active`: 吸收良好
 - `Inactive`: 吸收差
 
@@ -277,6 +280,7 @@ python3 scripts/adme_train.py --all --data-dir ./tdc_data/ --output-dir ./models
 **说明**: Pgp 是 ABC 转运蛋白，影响药物代谢和脑渗透。
 
 **类别**:
+
 - `Inhibitor`: Pgp 抑制剂（可能影响其他药物代谢）
 - `Non-inhibitor`: 非抑制剂
 
@@ -285,6 +289,7 @@ python3 scripts/adme_train.py --all --data-dir ./tdc_data/ --output-dir ./models
 **说明**: 预测药物口服后到达作用部位的比例。
 
 **类别**:
+
 - `High`: 生物利用度高（>50%）
 - `Low`: 生物利用度低
 
@@ -295,6 +300,7 @@ python3 scripts/adme_train.py --all --data-dir ./tdc_data/ --output-dir ./models
 **单位**: logD
 
 **解释**:
+
 - 过高：代谢快、溶解度差
 - 过低：膜通透性差
 - 理想范围：1-3
@@ -337,12 +343,15 @@ python3 ../mol-paper-renderer/scripts/mol_paper_renderer.py \
 ## 常见问题
 
 ### Q: 预测结果不准确怎么办？
-A: 
+
+A:
+
 - 检查分子是否在训练数据范围内（类似结构）
 - 尝试使用 XGBoost 模型（通常更准确）
 - 考虑使用集成方法（多个模型平均）
 
 ### Q: 如何评估模型质量？
+
 A: 使用 TDC 提供的 scaffold split 进行评估：
 
 ```python
@@ -356,9 +365,11 @@ rmse = mean_squared_error(y_true, y_pred, squared=False)
 ```
 
 ### Q: 支持大分子（蛋白质、抗体）吗？
+
 A: 当前版本仅支持小分子。大分子需要使用专门的模型（如 Developability 预测）。
 
 ### Q: 如何自定义模型参数？
+
 A: 修改训练脚本中的模型配置：
 
 ```python
@@ -402,6 +413,7 @@ model = RandomForestClassifier(
 所有数据集来自 [Therapeutics Data Commons (TDC)](https://tdcommons.ai/single_pred_tasks/adme/)
 
 **引用**:
+
 ```
 @article{huang2022therapeutics,
   title={Therapeutics Data Commons: Machine Learning Datasets and Tasks for Drug Discovery and Development},
@@ -420,5 +432,6 @@ python3 scripts/adme_predictor.py --smiles "CCO" -o ./output/adme_results.json
 ```
 
 对于飞书兼容性，建议输出到白名单目录：
+
 - `~/.openclaw/media/adme-prediction/`
 - `~/.openclaw/workspace/`

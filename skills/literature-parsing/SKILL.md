@@ -1,5 +1,5 @@
 ---
-name: literature_parsing
+name: literature-parsing
 description: 将 PDF 文献转换为 Markdown 文件，并提取所有图表图片。使用 MinerU (opendatalab) 进行工业级高质量解析。
 trigger: ["PDF 转 Markdown", "PDF 转换", "文献解析", "提取图片", "PDF to Markdown", "convert PDF", "extract figures", "PDF 转 markdown", "解析文献", "PDF 提取", "PDF 转文字"]
 ---
