@@ -1,12 +1,12 @@
 ---
-name: geometry_optimizer
+name: geometry-optimizer
 description: 使用半经验方法 (xTB) 对分子三维结构进行几何优化，支持 SMILES 自动转 3D、XYZ 文件输入，输出优化后坐标、能量、收敛状态。
 trigger: ["geometry optimization", "结构优化", "几何优化", "3D 优化", "optimize geometry", "xtb", "构象优化", "半经验优化", "分子结构预优化", "分子几何优化", "能量优化", "GFN-xTB"]
 ---
 
 # Geometry Optimizer
 
-`geometry_optimizer` 是一个用于 **分子三维几何结构优化** 的化学类 skill。  
+`geometry-optimizer` 是一个用于 **分子三维几何结构优化** 的化学类 skill。  
 它基于 **GFN-xTB 半经验量子化学方法**，对用户提供的分子初始结构进行快速、可落地的本地优化，输出优化后的坐标、能量、收敛状态等结果。
 
 ---
@@ -238,7 +238,7 @@ pip install rdkit
 ## 文件结构
 
 ```
-geometry_optimizer/
+geometry-optimizer/
 ├── SKILL.md                    # 本文件
 ├── README.md                   # 使用文档
 ├── INSTALL.md                  # 安装指南

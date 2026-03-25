@@ -169,7 +169,7 @@ xTB not available: xtb command not found
 ## 文件结构
 
 ```
-geometry_optimizer/
+geometry-optimizer/
 ├── SKILL.md              # Skill 说明文档
 ├── README.md             # 本文件
 ├── requirements.txt      # Python 依赖

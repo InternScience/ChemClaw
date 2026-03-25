@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-测试脚本 - 验证 geometry_optimizer 的 Python 代码逻辑
+测试脚本 - 验证 geometry-optimizer 的 Python 代码逻辑
 
 注意：完整的 xTB 优化需要系统安装 xTB。
 此脚本用于验证：
@@ -62,7 +62,7 @@ def test_3d_generation():
         ("乙酸", "CC(=O)O"),
     ]
     
-    test_dir = os.path.join(ROOT_DIR, "test_output")
+    test_dir = os.path.join("/tmp/chemclaw/geometry-optimizer", "test_output")
     os.makedirs(test_dir, exist_ok=True)
     
     for name, smiles in test_molecules:
@@ -98,7 +98,7 @@ def test_xyz_io():
         {"element": "H", "x": -0.5, "y": -0.5, "z": -0.5},
     ]
     
-    test_dir = os.path.join(ROOT_DIR, "test_output")
+    test_dir = os.path.join("/tmp/chemclaw/geometry-optimizer", "test_output")
     os.makedirs(test_dir, exist_ok=True)
     test_xyz = os.path.join(test_dir, "test_methane.xyz")
     

@@ -10,7 +10,7 @@
 ### 1. 安装 Python 依赖
 
 ```bash
-cd /home/administratorlulaiao/.openclaw/workspace/skills/geometry_optimizer
+cd /home/administratorlulaiao/.openclaw/workspace/skills/geometry-optimizer
 pip install -r requirements.txt
 ```
 

@@ -71,8 +71,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output-dir",
         type=str,
-        default=None,
-        help="Optional output directory for XYZ and log files."
+        default="/tmp/chemclaw/geometry-optimizer",
+        help="Output directory for XYZ and log files. Default: /tmp/chemclaw/geometry-optimizer"
     )
     parser.add_argument(
         "--backend",
