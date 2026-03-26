@@ -1,0 +1,7 @@
+rdkit
+numpy
+matplotlib
+lmdb
+remotezip
+scikit-learn
+joblib

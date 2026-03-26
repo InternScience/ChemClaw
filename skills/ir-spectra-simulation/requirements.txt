@@ -1,0 +1,6 @@
+mlatom
+numpy
+matplotlib
+pyscf
+geometric
+rdkit

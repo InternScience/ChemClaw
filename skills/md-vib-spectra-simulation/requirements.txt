@@ -1,0 +1,8 @@
+# Power spectrum from MD trajectory (no MNDO)
+mlatom>=3.0
+numpy
+matplotlib
+h5py
+pyh5md
+# For --run-md (ANI-1ccx MD from SMILES)
+rdkit
