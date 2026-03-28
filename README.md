@@ -9,19 +9,21 @@
   <strong>The first chemistry-native AI agent skill library.</strong>
 </p>
 <p align="center">
-  <a href="https://github.com/AI4Chem/ChemClaw/stargazers">
-    <img src="https://img.shields.io/github/stars/AI4Chem/ChemClaw?style=flat-square" alt="GitHub stars" />
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-green" alt="MIT License" />
   </a>
-  <a href="https://github.com/AI4Chem/ChemClaw/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/AI4Chem/ChemClaw?style=flat-square" alt="License" />
+  <a href="https://clawhub.ai">
+    <img src="https://img.shields.io/badge/ClawHub-26_skills-orange" alt="ClawHub Skills" />
   </a>
   <a href="https://github.com/AI4Chem/ChemClaw/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/AI4Chem/ChemClaw?style=flat-square" alt="Contributors" />
+    <img src="https://img.shields.io/github/contributors/AI4Chem/ChemClaw?color=c4f042&labelColor=black&style=flat-square" alt="Contributors" />
   </a>
   <a href="https://github.com/AI4Chem/ChemClaw/commits/main">
-    <img src="https://img.shields.io/github/last-commit/AI4Chem/ChemClaw?style=flat-square" alt="Last commit" />
+    <img src="https://img.shields.io/github/last-commit/AI4Chem/ChemClaw?color=c4f042&labelColor=black&style=flat-square" alt="Last commit" />
   </a>
-  <img src="https://img.shields.io/badge/Skills-26-0A66C2?style=flat-square" alt="ClawHub skills count" />
+  <a href="https://github.com/AI4Chem/ChemClaw/stargazers">
+    <img src="https://img.shields.io/github/stars/AI4Chem/ChemClaw?labelColor=black&style=flat-square&color=ffcb47" alt="GitHub stars" />
+  </a>
 </p>
 
 ## Install
