@@ -23,8 +23,8 @@
 | 3.5 | ↳ | `boiling-point-prediction` |  | ⬜ 待建设 |
 | 3.6 | ↳ | `ch-nmr-prediction` |  | ⬜ 待建设 |
 | 3.7 | ↳ | `b-nmr-prediction` |  | ⬜ 待建设 |
-| 3.8 | ↳ | `p-nmr-prediction` |  | ⬜ 待建设 |
-| 3.9 | ↳ | `f-nmr-prediction` |  | ⬜ 待建设 |
+| 3.8 | ↳ | [`p-nmr-simulation`](./p-nmr-simulation) | 基于 CIF 晶体结构预测固相 31P NMR 化学位移，并输出位移表与谱图。 | ✅ 已完成 |
+| 3.9 | ↳ | [`f-nmr-simulation`](./f-nmr-simulation) | 基于 CIF 晶体结构预测固相 19F NMR 化学位移，并输出位移表与谱图。 | ✅ 已完成 |
 | 3.10 | ↳ | `si-nmr-prediction` |  | ⬜ 待建设 |
 | 3.11 | ↳ | `ir-prediction` |  | ⬜ 待建设 |
 | 3.12 | ↳ | `raman-prediction` |  | ⬜ 待建设 |
